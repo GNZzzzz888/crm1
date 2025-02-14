@@ -1,0 +1,19 @@
+2025-02-14 01:27:42,879 DEBUG cd frappe-bench && python3 -m venv env
+2025-02-14 01:27:57,964 DEBUG cd frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2025-02-14 01:28:35,096 DEBUG cd frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet wheel
+2025-02-14 01:28:39,596 LOG Getting frappe
+2025-02-14 01:28:39,597 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2025-02-14 01:28:48,432 LOG Installing frappe
+2025-02-14 01:28:48,436 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/frappe-bench/apps/frappe 
+2025-02-14 01:30:25,324 DEBUG cd /workspace/frappe-bench/apps/frappe && yarn install --check-files
+2025-02-14 01:31:38,693 WARNING restart failed: Couldn't find supervisorctl in PATH
+2025-02-14 01:31:38,698 DEBUG cd frappe-bench && bench build
+2025-02-14 01:31:39,614 INFO /home/frappe/.local/bin/bench build
+2025-02-14 01:32:20,933 LOG setting up backups
+2025-02-14 01:32:20,961 LOG backups were set up
+2025-02-14 01:32:20,962 INFO Bench frappe-bench initialized
+2025-02-14 01:32:21,457 INFO /home/frappe/.local/bin/bench set-mariadb-host mariadb
+2025-02-14 01:32:21,899 INFO /home/frappe/.local/bin/bench set-redis-cache-host redis-cache:6379
+2025-02-14 01:32:22,343 INFO /home/frappe/.local/bin/bench set-redis-queue-host redis-queue:6379
+2025-02-14 01:32:22,865 INFO /home/frappe/.local/bin/bench set-redis-socketio-host redis-socketio:6379
+2025-02-14 01:32:23,384 INFO /home/frappe/.local/bin/bench new-site dev.localhost --mariadb-root-password 123 --admin-password admin --no-mariadb-socket
